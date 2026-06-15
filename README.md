@@ -20,3 +20,11 @@ This pipeline generates a synthetic daily commuter population for the Brussels C
 ## Running the pipeline
 
 Run the steps in order (1 → 11). Each step reads its inputs either from the previous step's `output/` folder or from its own `input_data/` folder — see the README in each step's directory for the exact files required and where to download them.
+
+Most input data are included as `input_data.zip` files (steps 1, 2, 3, 4, 7, and 8). Before running a step, unzip the archive into the step's folder:
+
+```bash
+unzip input_data.zip
+```
+
+A small number of files are too large to include in the zip (notably `belgium.osm.pbf` and `census_matrix_home_work_ss_2011.sqlite`) — see the README in the relevant step (3 and 8) for download instructions.
