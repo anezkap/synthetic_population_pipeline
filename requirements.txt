@@ -1,0 +1,8 @@
+geopandas
+ipfn
+matplotlib
+numpy
+pyosmium
+pandas
+scipy
+tqdm

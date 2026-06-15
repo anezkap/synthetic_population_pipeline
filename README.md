@@ -1,5 +1,7 @@
 This pipeline generates a synthetic daily commuter population for the Brussels Capital Region (BCR) for use in MATSim transport simulations. It covers Brussels residents and in-commuters, assigning each agent a home and work location, car ownership, transport mode, and a full daily activity plan (departure time, work duration, return trip). Each step is a self-contained folder with its own README listing the required input files.
 
+The pipeline is fully modular — each step can be run independently or replaced without affecting the others. All input data are publicly available and sourced from open government datasets (Statbel, Brussels UrbIS, OpenStreetMap).
+
 ## Pipeline steps
 
 | Step | Folder | Description |
@@ -16,6 +18,16 @@ This pipeline generates a synthetic daily commuter population for the Brussels C
 | 10 | `10_subpopulation_tags` | Tag each agent as `company_car`, `long_distance` (≥ 20 km), or `short_distance`, and enforce mode consistency (e.g. long-distance walkers and cyclists reassigned to PT). |
 | 11 | `11_remove_ld_pt` | Remove long-distance PT agents from the simulation population; they are teleported in MATSim and saved separately for post-hoc re-integration in the analysis. |
 | X | `X_results_analysis` | Post-simulation analysis and plotting notebook for MATSim output (modal split, distance distributions, score convergence, policy scenario comparisons). |
+
+## Requirements
+
+Python 3.10+ with the following packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+The `belgium.osm.pbf` pre-processing step also requires [Osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) to be installed and available on your PATH.
 
 ## Running the pipeline
 
