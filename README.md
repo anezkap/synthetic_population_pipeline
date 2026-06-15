@@ -2,6 +2,8 @@ This pipeline generates a synthetic daily commuter population for the Brussels C
 
 The pipeline is fully modular — each step can be run independently or replaced without affecting the others. All input data are publicly available and sourced from open government datasets (Statbel, Brussels UrbIS, OpenStreetMap).
 
+This project is licensed under the [MIT License](LICENSE).
+
 ## Pipeline steps
 
 | Step | Folder | Description |
