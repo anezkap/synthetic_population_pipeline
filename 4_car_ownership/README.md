@@ -7,4 +7,7 @@ Expected files in the input_data folder:
 * TF_CENSUS_2021_S12_cleaned.csv -- filtered version of the TF_CENSUS_2021_S12.xlsx containing only records for Brussels, see 1_1_census_data_cleaner.ipynb 
 
 
-All these datasets can be downloaded from: https://statbel.fgov.be/en/open-data/number-cars-household-statistical-sector-0, https://statbel.fgov.be/fr/open-data/consultez-tous-les-open-data-du-census-2021
+All these datasets can be downloaded from: 
+
+* https://statbel.fgov.be/en/open-data/number-cars-household-statistical-sector-0
+* https://statbel.fgov.be/fr/open-data/consultez-tous-les-open-data-du-census-2021
