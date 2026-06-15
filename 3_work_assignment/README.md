@@ -2,8 +2,8 @@ This step assigns a work location to each employed agent. `3_0_exploration.ipynb
 
 Expected files in the input_data folder:
 
-* belgium.osm.pbf
-* census_matrix_home_work_ss_2011.sqlite
+* belgium.osm.pbf   -- too large to be included in the zip input_data file, see more info below
+* census_matrix_home_work_ss_2011.sqlite    -- too large to be included in the zip input_data file, see more info below
 
 * pras.cst
 * pras.dbf
@@ -25,4 +25,38 @@ Expected files in the input_data folder:
 
 * working_population_home_work_municipality_2021_BCR_all.csv -- this is the table Census - Population active occupée selon le lieu de résidence et commune de travail from https://statbel.fgov.be/fr/themes/census/marche-du-travail/caracteristiques-de-lemploi#figures, only cleaned to contain rows from municipalities from Brussels
 
-All these datasets can be downloaded from: https://download.geofabrik.de/europe/belgium.html, https://statbel.fgov.be/fr/open-data/census-2011-matrice-des-deplacements-domicile-travail-par-secteur-statistique, https://statbel.fgov.be/en/open-data/statistical-sectors-2025, https://statbel.fgov.be/fr/themes/census/marche-du-travail/caracteristiques-de-lemploi#figures, https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access and https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
+All these datasets can be downloaded from:
+
+* https://download.geofabrik.de/europe/belgium.html
+* https://statbel.fgov.be/fr/open-data/census-2011-matrice-des-deplacements-domicile-travail-par-secteur-statistique
+* https://statbel.fgov.be/en/open-data/statistical-sectors-2025
+* https://statbel.fgov.be/fr/themes/census/marche-du-travail/caracteristiques-de-lemploi#figures
+* https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access
+* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
+
+
+To get the `belgium.osm.pbf` file, you can follow these steps:
+
+1. Download data from GeoFabrik: https://download.geofabrik.de/europe/belgium.html
+2. Run the following in the terminal (adjust file names as needed):
+
+```bash
+# All roads in Brussels
+osmosis --read-pbf-fast file=belgium-260204.osm.pbf \
+  --bounding-box top=50.9300 left=4.2300 bottom=50.7500 right=4.5100 \
+  completeWays=true --used-node \
+  --write-pbf brussels_network.osm.pbf
+
+# Major roads in Belgium
+osmosis --read-pbf-fast file=belgium-260204.osm.pbf --tf accept-ways \
+  highway=motorway,motorway_link,trunk,trunk_link,primary,primary_link \
+  --used-node \
+  --write-pbf bigroads_belgium_network.osm.pbf
+
+# Merged network
+osmosis --rb file=bigroads_belgium_network.osm.pbf \
+  --read-pbf-fast brussels_network.osm.pbf --merge \
+  --write-pbf belgium.osm.pbf
+```
+
+The census_matrix_home_work_ss_2011.sqlite file can be downloaded directly from https://statbel.fgov.be/fr/open-data/census-2011-matrice-des-deplacements-domicile-travail-par-secteur-statistique

@@ -19,4 +19,8 @@ Expected files in the input_data folder:
 * pras.shp
 * pras.shx
 
-All these datasets can be downloaded from: https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access, https://datastore.brussels/web/data/dataset/f6b83500-6a62-11ed-be6d-010101010000#access and https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
+All these datasets can be downloaded from:
+
+* https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access
+* https://datastore.brussels/web/data/dataset/f6b83500-6a62-11ed-be6d-010101010000#access
+* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
