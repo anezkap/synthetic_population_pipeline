@@ -1,0 +1,4 @@
+This step assigns each agent a `subpopulation` tag and applies mode corrections before producing the final population file. `10_subpopulation_tags.ipynb` reads the merged worker population from step 9 and labels each agent as `company_car` (Brussels residents with a company car), `long_distance` (commute >= 20 km), or `short_distance` (everyone else). It then enforces mode consistency: company-car agents are forced to `car`, long-distance agents assigned `walk`, `bike`, or `e-bike` are reassigned to `pt`, and walkers with a commute over 10 km are reassigned to `bike`. The corrected population is saved as `output/all_active_workers_final.csv`.
+
+Expected files in the input_data folder:
+NONE

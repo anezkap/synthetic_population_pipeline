@@ -1,0 +1,4 @@
+This step combines the Brussels resident workers (from step 7) and the Brussels commuters (from step 8) into a single unified population file. `9_1_merge.ipynb` maps both populations to a shared column schema — harmonising field names for sex, age, education, home/work coordinates, transport mode, and trip timing — and tags each agent with `lives_in_brussels`, `works_in_brussels`, and `population_type` (resident vs. commuter) flags before concatenating them into `output/workers_merged.csv`. `9_2_validation.ipynb` checks the composition and distributions of the merged population.
+
+Expected files in the input_data folder:
+NONE
