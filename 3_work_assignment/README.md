@@ -32,7 +32,7 @@ All these datasets can be downloaded from:
 * https://statbel.fgov.be/en/open-data/statistical-sectors-2025
 * https://statbel.fgov.be/fr/themes/census/marche-du-travail/caracteristiques-de-lemploi#figures
 * https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access
-* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
+* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras (https://gis.urban.brussels/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=PERSPECTIVE_FR:Affectations&outputFormat=shape-zip)
 
 
 To get the `belgium.osm.pbf` file, you can follow these steps:

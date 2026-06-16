@@ -40,7 +40,7 @@ All these datasets can be downloaded from:
 * https://www.mobility.vias.be/en/monitor/
 * https://download.geofabrik.de/europe/belgium.html
 * https://statbel.fgov.be/fr/open-data/census-2011-matrice-des-deplacements-domicile-travail-par-secteur-statistique
-* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras
+* https://perspective.brussels/fr/outils-de-planification/plans-et-programmes-dinitiative-regionale/pras (https://gis.urban.brussels/geoserver/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=PERSPECTIVE_FR:Affectations&outputFormat=shape-zip)
 * https://datastore.brussels/web/data/dataset/2cf42541-1813-11ef-8a81-00090ffe0001#access
 * https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie
 
